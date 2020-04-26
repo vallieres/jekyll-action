@@ -1,14 +1,11 @@
 FROM ruby:2.7-alpine
 
-LABEL version="2.0.1"
-LABEL repository="https://github.com/helaili/jekyll-action"
-LABEL homepage="https://github.com/helaili/jekyll-action"
-LABEL maintainer="Alain Hélaïli <helaili@github.com>"
+LABEL version="1.0.0"
+LABEL repository="https://github.com/lemonarc/jekyll-action"
+LABEL homepage="https://github.com/lemonarc/jekyll-action"
+LABEL maintainer="Leon Aves <leon@lemonarc.com>"
 
 RUN apk add --no-cache git build-base
-
-# debug
-RUN bundle version
 
 COPY LICENSE README.md /
 
