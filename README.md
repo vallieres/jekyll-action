@@ -29,7 +29,7 @@ jobs:
           ${{ runner.os }}-gems-
 
     # Standard usage
-    - uses:  lemonarc/jekyll-action@1.0.0
+    - uses:  vallieres/jekyll-action@1.0.0
     
     # Example deployment: Push to S3
     - name: Configure AWS credentials
@@ -41,5 +41,5 @@ jobs:
 
     - name: Sync output to S3
       run: |
-        aws s3 sync ./_site/ s3://my-s3-bucket --delete
+        aws s3 cp ./_site/ "s3://my-s3-bucket" --recursive
 ```
